@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com o dom</title>
+    <style>
+        body{
+            background: #4885ae;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando os estudos com DOM.</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a utilizar o DOM<strong>(Document Object Model)</strong></p>
+    <div id="msg">clique em mim</div>
+    <script>
+    var d = document.getElementById('msg') 
+    d.style.color = 'green'     
+    var p1 = window.document.getElementsByTagName('p')[1] //seleciona a tag que eu quero usar. O [1] faz com que eu especifique a tag a ser usada. não preciso colocar o window pois śó com document ele já entende que quero usar o arquivo html.
+    window.document.write('está escrito assim: ' + p1.innerText) //aqui foi pedido para concatenar o texto com a variavel. o innerText pega o texto que está dentro dessa variavel que eu chamei mas sem formatação.
+    window.document.write( p1.innerHTML) //o innerHTML pega o texto já com a formatação toda feita
+    p1.style.color = 'red' //aqui eu dei um estilo pelo javascript a variavel em questão
+    </script>
+</body>
+
+</html>
